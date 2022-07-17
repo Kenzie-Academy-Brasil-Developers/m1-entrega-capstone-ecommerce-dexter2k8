@@ -7,5 +7,6 @@ html,body,header,select,ul,li,img,figure,p,h1,h2,h3,nav,div,a,section{
     text-decoration: none;
     box-sizing: border-box;
     outline: none;
-    border: none;    
+    border: none; 
+    text-shadow: 1px 1px #000000cc;   
 }
