@@ -244,13 +244,16 @@ main aside .total {
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
+    background-color: #1e2e4c;    
+    border-radius: 6px;
 }
 
 main aside .total p {
+    padding: 10px;
     color: white;
-    margin-bottom: 20px;
+    line-height: 20px;
 }
 
-main aside .total .valor {
+main aside .total .valor {    
     text-align: right;
 }
