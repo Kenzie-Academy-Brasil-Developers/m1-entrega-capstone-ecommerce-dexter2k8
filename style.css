@@ -122,6 +122,7 @@ main .cards li section h1 {
 }
 
 main .cards li section .desc {
+    text-align: center;
     color: #666;
     font-size: 12px;
 }
@@ -158,8 +159,8 @@ main aside .search {
 main aside .search input {
     border: none;
     outline: none;
-    width: 207px;
-    padding: 12px 0px;
+    width: 203px;
+    padding: 12px 4px;
     border-radius: 5px 0px 0px 5px;
 }
 
