@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./img/logo.png">
+    <script defer src="./js/database.js"></script>
+    <script defer src="./js/script.js"></script>
     <title>Panda Store - Seu jogo está aqui!</title>
 </head>
 
@@ -22,11 +24,11 @@
             <div class="logo">
                 <a href=""><span>P</span>ANDA <span>S</span>TORE</a>
             </div>
-            <ul>
-                <li><a href="">TODOS</a></li>
-                <li><a href="">PC</a></li>
-                <li><a href="">PLAYSTATION</a></li>
-                <li><a href="">X-BOX</a></li>
+            <ul class="tagMenu">
+                <li><a>TODOS</a></li>
+                <li><a>PC</a></li>
+                <li><a>PLAYSTATION</a></li>
+                <li><a>X-BOX</a></li>
             </ul>
         </div>
     </header>
@@ -34,7 +36,7 @@
     <main>
         <div class="container">
             <ul class="cards">
-                <li id="#0">
+                <!-- <li id="#0">
                     <figure style="background-image: url(./img/forest.jpg);">
                         <input type="button" value="PC">
                     </figure>
@@ -109,18 +111,18 @@
                         <p class="price">R$124,89</p>
                         <button>Adicionar ao carrinho</button>
                     </section>
-                </li>
+                </li> -->
             </ul>
 
             <aside>
-                <form>
-                    <input type="text" placeholder="Procure seu jogo">
-                    <button class="fa fa-search"></button>
-                </form>
+                <div class="search">
+                    <input type="text" placeholder="Procure seu jogo" id="searchbox">
+                    <button class="fa fa-search" onclick="searchClick()"></button>
+                </div>
                 <section>
                     <h1>CARRINHO DE COMPRAS</h1>
                     <ul class="cart">
-                        <li id="0">
+                        <!-- <li>
                             <figure>
                                 <img src="./img/onedog.webp" alt="">
                             </figure>
@@ -131,7 +133,7 @@
                             </section>
                         </li>
 
-                        <li id="1">
+                        <li>
                             <figure>
                                 <img src="./img/onedog.webp" alt="">
                             </figure>
@@ -142,7 +144,7 @@
                             </section>
                         </li>
 
-                        <li id="2">
+                        <li>
                             <figure>
                                 <img src="./img/onedog.webp" alt="">
                             </figure>
@@ -153,7 +155,7 @@
                             </section>
                         </li>
 
-                        <li id="3">
+                        <li>
                             <figure>
                                 <img src="./img/onedog.webp" alt="">
                             </figure>
@@ -162,7 +164,7 @@
                                 <p class="price">R$124,89</p>
                                 <button>Remover Produto</button>
                             </section>
-                        </li>
+                        </li> -->
                     </ul>
                     <div class="total">
                         <div class="texto">
@@ -170,8 +172,8 @@
                             <p>Total:</p>
                         </div>
                         <div class="valor">
-                            <p id="qtd">3</p>
-                            <p id="val">R$450,00</p>
+                            <p id="qtd">0</p>
+                            <p id="val">R$0,00</p>
                         </div>
                     </div>
                 </section>

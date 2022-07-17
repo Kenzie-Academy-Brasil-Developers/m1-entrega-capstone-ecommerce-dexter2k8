@@ -1,6 +1,11 @@
 body {
     font-family: poppins, sans-serif;
-    background-color: #1a1a1a;
+    background: linear-gradient(-45deg, rgba(42, 62, 89, 1) 5%, rgba(64, 121, 153, 1) 95%);
+}
+
+html {
+    --scrollbarBG: #CFD8DC;
+    --thumbBG: #90A4AE;
 }
 
 .container {
@@ -10,7 +15,7 @@ body {
 
 header {
     background-color: #1e2e4c;
-    box-shadow: 1px 1px 10px 1px rgb(255 255 255 / 30%);
+    box-shadow: 0 0 5px #000;
 }
 
 header .container {
@@ -44,7 +49,7 @@ header .logo a span {
     color: #a700f4;
 }
 
-header ul{
+header ul {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -52,6 +57,7 @@ header ul{
 }
 
 header ul li a {
+    cursor: pointer;
     font-weight: 600;
     color: white;
     transition: 0.3s ease;
@@ -78,7 +84,7 @@ main .cards li {
     background-size: 100%;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 1px 1px 10px 1px rgb(255 255 255 / 3%);
+    box-shadow: 0 0 5px #000;
     transition: 0.3s;
 }
 
@@ -89,18 +95,15 @@ main .cards li:hover {
 main .cards li figure {
     width: 100%;
     height: 140px;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 
-main .cards li figure input {
-    width: 120px;
-    cursor: pointer;
-    border: transparent;
+main .cards li figure div{
+    text-align: center;
+    width: 100px;
     color: white;
     background-color: rgba(167 0 244 / 30%);
-    font-family: poppins, sans-serif;    
-    transition: 0.3s;
 }
 
 main .cards li section {
@@ -146,13 +149,13 @@ main aside {
     width: 240px;
 }
 
-main aside form {
+main aside .search {
     margin-top: 18px;
     border-radius: 6px;
     white-space: nowrap;
 }
 
-main aside form input {
+main aside .search input {
     border: none;
     outline: none;
     width: 207px;
@@ -160,7 +163,7 @@ main aside form input {
     border-radius: 5px 0px 0px 5px;
 }
 
-main aside form button {
+main aside .search button {
     cursor: pointer;
     border: transparent;
     padding: 10px 10px 13px 10px;
@@ -178,10 +181,27 @@ main aside h1 {
     white-space: nowrap;
 }
 
+main aside ul.cart::-webkit-scrollbar {
+    width: 11px;
+}
+
 main aside ul.cart {
     height: 300px;
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
+
+main aside ul.cart::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+    border-radius: 6px;
+}
+
+main aside ul.cart::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+  }
 
 main aside .cart li {
     width: 220px;
@@ -189,17 +209,22 @@ main aside .cart li {
     justify-content: center;
     gap: 5px;
     margin-bottom: 20px;
+    border-radius: 6px;
+    background-color: rgb(30 46 76 / 30%);
 }
 
-main aside .cart li figure {
-    margin: 5px 0px 0px 0px;
-    width: 90px;
-    overflow: hidden;
+main aside .cart li figure { 
+    display: flex;
+    align-items: center;
+    width: 90px;    
 }
 
 main aside .cart li figure img {
-    transform: translateX(-12%);
-    width: 133%;
+    width: 100%;
+}
+
+main aside .cart li section{
+    width: 120px;
 }
 
 main aside .cart li section h2,
