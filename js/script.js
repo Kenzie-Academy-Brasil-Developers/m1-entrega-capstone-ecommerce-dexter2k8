@@ -52,6 +52,7 @@ function listCart() {
 function addClick(event) {
     //Recebe o índice do produto selecionado
     let index = (event.target.parentNode.parentNode.id)
+    
     //Localiza o produto no database
     const product = data.find(el => el.id == index)
 
@@ -81,6 +82,7 @@ function removeClick(event) {
     listCart()
 }
 
+// Filtra para exibir os itens cuja tag é igual o título clicado
 document.querySelector('.tagMenu').addEventListener('click', function (event) {
     if (event.target.tagName == 'A') {
         if (event.target.innerText == 'TODOS')
@@ -90,6 +92,7 @@ document.querySelector('.tagMenu').addEventListener('click', function (event) {
     }
 })
 
+// Filtra o título do card conforme o texto digitado
 function searchClick() {
    listProducts(data.filter(el => el.title.toLowerCase().includes(searchbox.value.toLowerCase())))
 }
